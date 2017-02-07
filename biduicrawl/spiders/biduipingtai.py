@@ -42,10 +42,10 @@ class BiduiSpider(scrapy.Spider):
     # 获取下载设备比对结果的路径
     def parse_device(self, response):
         url = 'http://132.121.80.158:8090/plversion/dorado/view-service'
-        body = '''{"action":"remote-service","service":"outputAllDataService#findAllDataOutPutExcel","parameter":{"pageflag":"TMP_IPRANNETL2WGDIFFERENT","pageNo":1,"pageSize":60000},"context":{"orgId":null,"DataORG_ID":null,"pageflag":"TMP_IPRANNETL2WGDIFFERENT","ListStatisSQL":null,"Createdate":null,"CompareStatus":null,"viewId":"com.gxlu.statisticommon.view.charttest"},"loadedDataTypes":["dataTypeDatatable","dataTypeGisProject","dataTypeTime","dataTypeTelant","dataTypeOrgStruct"]}'''
+        body = '{"action":"remote-service","service":"outputAllDataService#findAllDataOutPutExcel","parameter":{"pageflag":"TMP_IPRANNETL2WGDIFFERENT","pageNo":1,"pageSize":60000},"context":{"DataORG_ID":null,"orgId":null,"pageflag":"TMP_IPRANNETL2WGDIFFERENT","ListStatisSQL":null,"CompareStatus":null,"Createdate":null,"viewId":"com.gxlu.statisticommon.view.charttest"},"loadedDataTypes":["dataTypeGisProject","dataTypeDatatable","dataTypeTelant","dataTypeOrgStruct","dataTypeTime"]}'
         headers = {
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Host': '132.121.80.158:8090',
+            # 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            # 'Host': '132.121.80.158:8090',
             'Origin': 'http://132.121.80.158:8090',
             'Referer': 'http://132.121.80.158:8090/plversion/com.gxlu.statisticommon.view.ListConfig.d?viewId=com.gxlu.statisticommon.view.charttest&pageflag=TMP_IPRANNETL2WGDIFFERENT&wordUri=4GdataCompare',
             'Content-Type': 'text/javascript',
@@ -80,10 +80,10 @@ class BiduiSpider(scrapy.Spider):
         with open(filename_device, 'wb') as f:
             f.write(response.body)
         url = 'http://132.121.80.158:8090/plversion/dorado/view-service'
-        body = '''{"action":"remote-service","service":"outputAllDataService#findAllDataOutPutExcel","parameter":{"pageflag":"TMP_IPRANCARDTL2WGDIFFERENT","pageNo":3,"pageSize":60000},"context":{"orgId":null,"DataORG_ID":null,"pageflag":"TMP_IPRANCARDTL2WGDIFFERENT","ListStatisSQL":null,"Createdate":null,"CompareStatus":null,"viewId":"com.gxlu.statisticommon.view.charttest"},"loadedDataTypes":["dataTypeDatatable","dataTypeOrgStruct","dataTypeTelant","dataTypeGisProject","dataTypeTime"]}'''
+        body = '{"action":"remote-service","service":"outputAllDataService#findAllDataOutPutExcel","parameter":{"pageflag":"TMP_IPRANCARDTL2WGDIFFERENT","pageNo":3,"pageSize":60000},"context":{"orgId":null,"DataORG_ID":null,"pageflag":"TMP_IPRANCARDTL2WGDIFFERENT","ListStatisSQL":null,"Createdate":null,"CompareStatus":null,"viewId":"com.gxlu.statisticommon.view.charttest"},"loadedDataTypes":["dataTypeTime","dataTypeDatatable","dataTypeTelant","dataTypeOrgStruct","dataTypeGisProject"]}'
         headers = {
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Host': '132.121.80.158:8090',
+            # 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            # 'Host': '132.121.80.158:8090',
             'Origin': 'http://132.121.80.158:8090',
             'Referer': 'http://132.121.80.158:8090/plversion/com.gxlu.statisticommon.view.ListConfig.d?viewId=com.gxlu.statisticommon.view.charttest&pageflag=TMP_IPRANCARDTL2WGDIFFERENT&wordUri=4GdataCompare',
             'Content-Type': 'text/javascript',
@@ -117,10 +117,10 @@ class BiduiSpider(scrapy.Spider):
             f.write(response.body)
 
         url = 'http://132.121.80.158:8090/plversion/dorado/view-service'
-        body = '''{"action":"remote-service","service":"outputAllDataService#findAllDataOutPutExcel","parameter":{"pageflag":"TMP_IPRANLINKTL2WGDIFFERENT","pageNo":2,"pageSize":60000},"context":{"orgId":null,"DataORG_ID":null,"pageflag":"TMP_IPRANLINKTL2WGDIFFERENT","ListStatisSQL":null,"Createdate":null,"CompareStatus":null,"viewId":"com.gxlu.statisticommon.view.charttest"},"loadedDataTypes":["dataTypeGisProject","dataTypeOrgStruct","dataTypeDatatable","dataTypeTime","dataTypeTelant"]}'''
+        body = '{"action":"remote-service","service":"outputAllDataService#findAllDataOutPutExcel","parameter":{"pageflag":"TMP_IPRANLINKTL2WGDIFFERENT","pageNo":2,"pageSize":60000},"context":{"orgId":null,"DataORG_ID":null,"pageflag":"TMP_IPRANLINKTL2WGDIFFERENT","ListStatisSQL":null,"Createdate":null,"CompareStatus":null,"viewId":"com.gxlu.statisticommon.view.charttest"},"loadedDataTypes":["dataTypeOrgStruct","dataTypeDatatable","dataTypeTime","dataTypeTelant","dataTypeGisProject"]}'
         headers = {
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Host': '132.121.80.158:8090',
+            # 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            # 'Host': '132.121.80.158:8090',
             'Origin': 'http://132.121.80.158:8090',
             'Referer': 'http://132.121.80.158:8090/plversion/com.gxlu.statisticommon.view.ListConfig.d?viewId=com.gxlu.statisticommon.view.charttest&pageflag=TMP_IPRANLINKTL2WGDIFFERENT&wordUri=4GdataCompare',
             'Content-Type': 'text/javascript',
