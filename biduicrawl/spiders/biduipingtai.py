@@ -2,7 +2,7 @@
 import scrapy
 import json
 import os
-from scrapy.shell import inspect_response
+# from scrapy.shell import inspect_response
 from zipfile import ZipFile
 
 import xlrd
@@ -28,8 +28,8 @@ class BiduiSpider(scrapy.Spider):
         }
         login_info = {
             'PL': '1',
-            'password': '654321',
-            'username': 'tool_admin'
+            'password': '******',
+            'username': '******'
         }
         yield scrapy.FormRequest(
             url=url,
